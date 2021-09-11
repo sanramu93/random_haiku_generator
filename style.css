@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oxygen:wght@400;700&display=swap");
+/* font-family: 'Kaushan Script', cursive;
+font-family: 'Oxygen', sans-serif; */
+
+/* QUICK RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: "Oxygen", sans-serif;
+  background: linear-gradient(#212529, #495057);
+  color: #dee2e6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.haiku-container {
+  border: 10px solid #adb5bd;
+  border-radius: 8px;
+  width: 50%;
+  height: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+#title {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#haiku {
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+#author {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-family: "Kaushan Script", cursive;
+}
+
+#generate {
+  height: 50px;
+  width: 140px;
+  font-size: 1rem;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  background-color: rgba(33, 37, 41, 0.7);
+  color: #dee2e6;
+}
+
+#generate:hover {
+  background-color: #495057;
+  cursor: pointer;
+  transition: all ease-in-out 100ms;
+}
+
+#generate:active {
+  background-color: #868e96;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+  .haiku-container {
+    border: 6px solid #adb5bd;
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    font-size: 14px !important;
+  }
+  .haiku-container {
+    margin-top: 10%;
+    border: none;
+    width: 80%;
+    height: 80%;
+  }
+  #generate {
+    height: 40px;
+    width: 120px;
+    font-size: 0.8rem;
+  }
+}
