@@ -30,7 +30,9 @@ body {
 }
 
 .haiku-container {
+  min-height: 350px;
   border: 10px solid #adb5bd;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   width: 50%;
   height: 60%;
@@ -49,6 +51,7 @@ body {
 }
 
 #haiku {
+  margin: 0 20px;
   margin-bottom: 3rem;
   font-size: 1.4rem;
   line-height: 2.5rem;
@@ -81,24 +84,54 @@ body {
 }
 
 /* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .haiku-container {
+    height: 50%;
+  }
+}
+
 @media (max-width: 500px) {
   .haiku-container {
     border: 6px solid #adb5bd;
     width: 70%;
     height: 70%;
   }
+  #title,
+  #haiku,
+  #author {
+    margin-bottom: 2rem;
+  }
+
+  #haiku {
+    line-height: 2rem;
+  }
 }
 
 @media (max-width: 350px) {
-  body {
-    font-size: 14px !important;
-  }
   .haiku-container {
     margin-top: 10%;
     border: none;
     width: 80%;
     height: 80%;
   }
+  #title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #haiku {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+  }
+
+  #author {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
   #generate {
     height: 40px;
     width: 120px;
