@@ -6,6 +6,7 @@ const line2El = document.querySelector(".line--2");
 const line3El = document.querySelector(".line--3");
 const authorEl = document.getElementById("author");
 const btnGenerate = document.getElementById("generate");
+const fadeElm = document.querySelector(".fade");
 
 const haikus = [
   {
@@ -60,13 +61,18 @@ const genRdmHaiku = function (arr) {
 const genBgColor = function (title) {};
 
 btnGenerate.addEventListener("click", function () {
-  const rdmHaiku = genRdmHaiku(haikus);
-  const haikuLines = rdmHaiku.haiku.split("-");
-  titleEl.textContent = rdmHaiku.title;
-  line1El.textContent = `"${haikuLines[0]}`;
-  line2El.textContent = `${haikuLines[1]}`;
-  line3El.textContent = `${haikuLines[2]}"`;
-  authorEl.textContent = `- ${rdmHaiku.author}`;
+  fadeElm.style.opacity = 0;
+  setTimeout(function () {
+    const rdmHaiku = genRdmHaiku(haikus);
+    const haikuLines = rdmHaiku.haiku.split("-");
+    titleEl.textContent = rdmHaiku.title;
+    line1El.textContent = `"${haikuLines[0]}`;
+    line2El.textContent = `${haikuLines[1]}`;
+    line3El.textContent = `${haikuLines[2]}"`;
+    authorEl.textContent = `- ${rdmHaiku.author}`;
+
+    fadeElm.style.opacity = 100;
+  }, 650);
 });
 console.log(genRdmHaiku(haikus));
 
