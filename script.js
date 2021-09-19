@@ -58,8 +58,6 @@ const genRdmHaiku = function (arr) {
   return arr[rdmN];
 };
 
-const genBgColor = function (title) {};
-
 btnGenerate.addEventListener("click", function () {
   fadeElm.style.opacity = 0;
   setTimeout(function () {
@@ -72,7 +70,7 @@ btnGenerate.addEventListener("click", function () {
     authorEl.textContent = `- ${rdmHaiku.author}`;
 
     fadeElm.style.opacity = 100;
-  }, 650);
+  }, 400);
 });
 console.log(genRdmHaiku(haikus));
 
